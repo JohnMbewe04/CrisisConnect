@@ -5,6 +5,8 @@ import os
 
 # Load API key from environment variable for safety
 openai.api_key = os.getenv("OPENAI_API_KEY")
+print("API KEY:", openai.api_key)
+
 def get_response(user_input):
     try:
         response = openai.ChatCompletion.create(
